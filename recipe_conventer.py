@@ -3,10 +3,10 @@ import code2flow
 import pytesseract
 from recipe_conventer_function import img_set, contours, resize, save_data
 
-# parameteres
+# parameteres std   threshold_value = 135 psm_config = 6 oem_config = 1
 min_contour_width = 1000
 min_contour_height = 500
-threshold_value = 150
+threshold_value = 135
 psm_config = 6
 oem_config = 1
 screen_size = (1366, 768)
@@ -16,7 +16,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 code2flow.dot_path = r'C:\Program Files\Graphviz\bin\dot.exe'
 
 # Load of raw data
-path_to_raw = r'C:\Users\Marek\Desktop\python_291223_cost_of_life\raw\132.jpg'
+path_to_raw = r'C:\Users\Marek\Desktop\python_291223_cost_of_life\raw\177.jpg'
 img = cv2.imread(path_to_raw)
 
 
@@ -33,3 +33,4 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 save = save_data(path_to_raw, img, text)
+
